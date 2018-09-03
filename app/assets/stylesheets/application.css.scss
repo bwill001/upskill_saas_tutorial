@@ -17,11 +17,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-/* sanserif is back-up font */
+//typography, sanserif is back-up font
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
+//background gradient for header
 .navbar, .home-callout{
   //gradient provided by @_ighosh at uiGradients.com
   background: #ff7e5f;  /* fallback for old browsers */
@@ -33,14 +34,19 @@ h1, h2, h3 {
   border: none;
 }
 
-.navbar-default .navbar-brand{
+//navigation bar text 
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a{
   color:white;
+  
+  //Sass nesting
+  &:hover{
+    color:white;
+    opacity: 0.75;
+  }
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: white;
-}
-
+//homepage header styles
 .home-callout{
   color: white;
   margin-top: -20px;
