@@ -48,6 +48,24 @@ h1, h2, h3 {
   }
 }
 
+.navbar-brand{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+}
+
+//navigation icon bars
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+//navigation icon colors
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #ff7e5f;
+  }
+}
+
 //homepage header styles
 .home-callout{
   color: white;
