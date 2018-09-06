@@ -4,7 +4,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
   
+  #saving to db
   def create
+    #mass assignment
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to new_contact_path, notice: "Message sent."
@@ -15,6 +17,7 @@ class ContactsController < ApplicationController
   
   private
     def contact_params
+      #strong parameters
        params.require(:contact).permit(:name, :email, :comments)
     end
 end
