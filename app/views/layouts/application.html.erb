@@ -33,7 +33,13 @@
       </div>
     </nav>
 
-
+  <!--show message no matter where customer is redirected -->
+  <div class="container">
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+    <% end %>
+  </div>
+  
   <%= yield %>
 
     
